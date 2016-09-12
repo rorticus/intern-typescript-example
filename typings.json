@@ -4,8 +4,8 @@
 		"dojo-loader": "npm:dojo-loader"
 	},
 	"devDependencies": {
-		"chai": "registry:npm/chai#3.5.0+20160415060238",
-		"glob": "registry:npm/glob#6.0.0+20160211003958"
+		"chai": "registry:npm/chai",
+		"glob": "registry:npm/glob"
 	},
 	"globalDevDependencies": {
 		"digdug": "github:dojo/typings/custom/digdug/digdug.d.ts#a62873258aa1deed48f9882c193c335436100d4b",
