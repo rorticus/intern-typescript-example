@@ -14,7 +14,7 @@ test.describe('intern-typescript-example', function () {
 	test.describe('something something', function () {
 
 		test.it('should display hello world', function () {
-			return page.getMain().then((text: string) => {
+			return page.getWorld().then((text: string) => {
 				assert.equal(text, 'hello world');
 			});
 		});
