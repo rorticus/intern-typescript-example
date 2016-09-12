@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "./node_modules/.bin/tsc",
+    "test": "./node_modules/.bin/intern-runner config=_build/tests/intern-local"
   },
   "author": "",
   "license": "ISC",
