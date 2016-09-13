@@ -8,8 +8,11 @@ export default class Login extends React.Component<{}, {}> {
 					<div className='panel-heading'>
 						<h3 className='panel-title'>Hello World</h3>
 					</div>
-					<div className='panel-body'>
-						<div>Hello World</div>
+					<div className='panel-body main'>
+						<div className='spinner'>
+							<div className='dot1'></div>
+							<div className='dot2'></div>
+						</div>
 					</div>
 				</div>
 			</div>
