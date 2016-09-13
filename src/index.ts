@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Login from './Login';
+import App from './App';
 
 ReactDOM.render(
-	React.createElement(Login, { foo: 'bar' }),
+	React.createElement(App, { foo: 'bar' }),
 	document.getElementById('app')
 );

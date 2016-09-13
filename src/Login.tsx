@@ -3,14 +3,22 @@ import * as React from 'react';
 export default class Login extends React.Component<{}, {}> {
 	public render() {
 		return (
-			<form className='form-signin'>
-			<h2 className='form-signin-heading'>Please sign in</h2>
-			<label htmlFor='inputEmail' className='sr-only'>Email address</label>
-				<input type='email' id='inputEmail' className='form-control' placeholder='Email address' required />
-			<label htmlFor='inputPassword' className='sr-only'>Password</label>
-				<input type='password' id='inputPassword' className='form-control' placeholder='Password' required />
-			<button className='btn btn-lg btn-primary btn-block' type='submit'>Sign in</button>
-			</form>
+			<div className='row col-md-4 col-md-offset-4'>
+				<div className='panel panel-default'>
+					<div className='panel-heading'>
+						<h3 className='panel-title'>Please sign in</h3>
+					</div>
+					<div className='panel-body'>
+						<form className='form-signin'>
+							<label htmlFor='inputEmail' className='sr-only'>Email address</label>
+							<input type='email' id='inputEmail' className='form-control' placeholder='Email address' required />
+							<label htmlFor='inputPassword' className='sr-only'>Password</label>
+							<input type='password' id='inputPassword' className='form-control' placeholder='Password' required />
+							<button className='btn btn-lg btn-primary btn-block' type='submit'>Sign in</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		);
 	}
 }
