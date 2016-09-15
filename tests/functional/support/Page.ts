@@ -1,6 +1,9 @@
 class Selectors {
-	public main = '.main';
-	public world = '.world';
+	public main = '.container';
+	public userInput = '#inputEmail';
+	public passwordInput = '#inputPassword';
+	public signInButton = 'button.btn';
+	public signInFailedMessage = '.form-failed';
 }
 
 export default class Page {
@@ -20,9 +23,36 @@ export default class Page {
 			.setFindTimeout(100);
 	}
 
-	getWorld(): Promise<string> {
+	inputUser(user: string): Promise<any> {
 		return this.remote
-			.findByCssSelector(this.selectors.world)
+			.findByCssSelector(this.selectors.userInput)
+			.type(user)
+			.end();
+	}
+
+	inputPassword(password: string): Promise<any> {
+		return this.remote
+			.findByCssSelector(this.selectors.passwordInput)
+			.type(password)
+			.end();
+	}
+
+	clickSignIn(): Promise<any> {
+		return this.remote
+			.findByCssSelector(this.selectors.signInButton)
+			.click()
+			.end();
+	}
+
+	getSignInError() {
+		return this.remote
+			.findByCssSelector(this.selectors.signInFailedMessage)
 			.getVisibleText();
+	}
+
+	loginWith(username: string, password: string): Promise<any> {
+		return this.inputUser(username)
+			.then(() => this.inputPassword(password))
+			.then(() => this.clickSignIn());
 	}
 }

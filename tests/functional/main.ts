@@ -11,12 +11,14 @@ test.describe('intern-typescript-example', function () {
 		return page.init();
 	});
 
-	test.describe('something something', function () {
+	test.describe('logging in', function () {
 
-		test.it('should display hello world', function () {
-			return page.getWorld().then((text: string) => {
-				assert.equal(text, 'hello world');
-			});
+		test.it('should display error message when invalid username and password entered', function () {
+			return page.loginWith('matt', 'fail')
+				.then(() => page.getSignInError())
+				.then((errorText: string) => {
+					assert.equal(errorText, 'Invalid credentials, please try again.');
+				});
 		});
 
 	});
