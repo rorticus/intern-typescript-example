@@ -21,9 +21,7 @@ export default class Login extends React.Component<{}, {
 	}
 	public render() {
 		let content = (
-			<div>
-				<p>Welcome to My Application</p>
-			</div>
+			<h4>Welcome to My Application</h4>
 		);
 		if (this.state.loading) {
 			content = <Spinner />;
