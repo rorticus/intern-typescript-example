@@ -4,6 +4,7 @@ class Selectors {
 	public passwordInput = '#inputPassword';
 	public signInButton = 'button.btn';
 	public signInFailedMessage = '.form-failed';
+	public getMainPageText = 'h4';
 }
 
 export default class Page {
@@ -47,6 +48,14 @@ export default class Page {
 	getSignInError() {
 		return this.remote
 			.findByCssSelector(this.selectors.signInFailedMessage)
+			.getVisibleText();
+	}
+
+	getMainPageText() {
+		return this.remote
+			.setFindTimeout(5000)
+			.findByCssSelector(this.selectors.getMainPageText)
+			.setFindTimeout(100)
 			.getVisibleText();
 	}
 

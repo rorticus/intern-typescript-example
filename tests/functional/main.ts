@@ -21,6 +21,14 @@ test.describe('intern-typescript-example', function () {
 				});
 		});
 
+		test.it('should show main page when valid username and password entered', function () {
+			return page.loginWith('admin', 'password')
+				.then(() => page.getMainPageText())
+				.then((mainText: string) => {
+					assert.equal(mainText, 'Welcome to My Application');
+				});
+		});
+
 	});
 
 });
