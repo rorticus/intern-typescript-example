@@ -4,7 +4,7 @@ import Page from './support/Page';
 
 test.describe('intern-typescript-example', function () {
 
-	let page: any;
+	let page: Page;
 
 	test.beforeEach(() => {
 		page = new Page(this.remote);
