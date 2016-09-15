@@ -20,7 +20,11 @@ export default class Login extends React.Component<{}, {
 		setTimeout(() => this.setState({ loading: false }), 3000);
 	}
 	public render() {
-		let content = <div>Welcome to My Application</div>;
+		let content = (
+			<div>
+				<p>Welcome to My Application</p>
+			</div>
+		);
 		if (this.state.loading) {
 			content = <Spinner />;
 		}

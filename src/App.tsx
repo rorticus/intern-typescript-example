@@ -8,13 +8,17 @@ export default class App extends React.Component<{}, {
 	constructor(props: any) {
 		super(props);
 		this.state = { loggedIn: false };
-		setTimeout(() => this.setState({ loggedIn: true }), 3000);
+	}
+	private onSuccess() {
+		this.setState({ loggedIn: true });
 	}
 	public render() {
-		let main = <Login />;
+		let main = <Login onSuccess={ this.onSuccess.bind(this) } />;
+
 		if (this.state.loggedIn) {
 			main = <Main />;
 		}
+
 		return (
 			<div className='container'>
 				{ main }
