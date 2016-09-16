@@ -15,7 +15,7 @@ test.describe('intern-typescript-example', function () {
 
 		test.it('should display error message when invalid username and password entered', function () {
 			return page.loginWith('matt', 'fail')
-				.then(() => page.getSignInError())
+				.then(() => page.getSignInErrorText())
 				.then((errorText: string) => {
 					assert.equal(errorText, 'Invalid credentials, please try again.');
 				});
@@ -28,7 +28,6 @@ test.describe('intern-typescript-example', function () {
 					assert.equal(mainText, 'Welcome to My Application');
 				});
 		});
-
 	});
 
 });

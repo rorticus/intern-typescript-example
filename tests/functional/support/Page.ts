@@ -45,13 +45,13 @@ export default class Page {
 			.end();
 	}
 
-	getSignInError() {
+	getSignInErrorText(): Promise<string> {
 		return this.remote
 			.findByCssSelector(this.selectors.signInFailedMessage)
 			.getVisibleText();
 	}
 
-	getMainPageText() {
+	getMainPageText(): Promise<string> {
 		return this.remote
 			.setFindTimeout(5000)
 			.findByCssSelector(this.selectors.getMainPageText)
