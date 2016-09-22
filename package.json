@@ -6,6 +6,7 @@
   "scripts": {
     "copy": "./node_modules/.bin/copyfiles src/resources/** _build",
     "compile": "./node_modules/.bin/tsc",
+    "serve": "./node_modules/.bin/http-server",
     "test": "./node_modules/.bin/intern-runner config=_build/tests/intern-local"
   },
   "author": "",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "@types/react": "^0.14.34",
     "copyfiles": "^1.0.0",
+    "http-server": "^0.9.0",
     "intern": "^3.3.1",
     "remap-istanbul": "^0.6.4",
     "tslint": "^3.15.0-dev.0",
