@@ -1,29 +1,26 @@
 {
   "name": "intern-typescript-example",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "copy": "./node_modules/.bin/copyfiles src/resources/** _build",
     "compile": "./node_modules/.bin/tsc",
     "serve": "./node_modules/.bin/http-server",
     "test": "./node_modules/.bin/intern-runner config=_build/tests/intern-local"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "devDependencies": {
-    "@types/react": "^0.14.34",
-    "copyfiles": "^1.0.0",
-    "http-server": "^0.9.0",
-    "intern": "^3.3.1",
-    "remap-istanbul": "^0.6.4",
-    "tslint": "^3.15.0-dev.0",
-    "typescript": "^2.0.2"
+    "@types/react": "0.14.34",
+    "copyfiles": "1.0.0",
+    "http-server": "0.9.0",
+    "intern": "3.3.1",
+    "remap-istanbul": "0.6.4",
+    "tslint": "3.15.0-dev.0",
+    "typescript": "2.0.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "dojo-loader": "^2.0.0-beta.5",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "bootstrap": "3.3.7",
+    "dojo-loader": "2.0.0-beta.7",
+    "react": "15.3.1",
+    "react-dom": "15.3.1"
   }
 }
