@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "copy": "./node_modules/.bin/copyfiles src/resources/** _build",
-    "dev": "./node_modules/.bin/tsc",
+    "compile": "./node_modules/.bin/tsc",
     "test": "./node_modules/.bin/intern-runner config=_build/tests/intern-local"
   },
   "author": "",
