@@ -41,7 +41,7 @@ export const initialBaseUrl: string = (function () {
 // The desired AMD loader to use when running unit tests (client.html/client.js). Omit to use the default Dojo
 // loader
 export const loaders = {
-	'host-browser': 'node_modules/dojo-loader/loader.js',
+	'host-browser': 'node_modules/@dojo/loader/loader.js',
 	'host-node': 'dojo-loader'
 };
 
@@ -53,11 +53,14 @@ export const loaderOptions = {
 		{ name: 'src', location: '_build/src' },
 		{ name: 'tests', location: '_build/tests' },
 		{ name: 'dojo', location: 'node_modules/intern/node_modules/dojo' }
-	]
+	],
+	shim: {
+		'angular': { exports: 'angular' }
+	}
 };
 
 // Functional test suite(s) to run in each browser once non-functional tests are completed
-export const functionalSuites = [ 'tests/functional/all' ];
+export const suites = [ 'tests/unit/all' ];
 
 // A regular expression matching URLs to files that should not be included in code coverage analysis
 export const excludeInstrumentation = /(?:node_modules|bower_components|tests)[\/\\]/;

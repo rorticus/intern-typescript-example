@@ -3,7 +3,6 @@
 	"compilerOptions": {
 		"declaration": false,
 		"module": "umd",
-		"jsx": "React",
 		"noImplicitAny": true,
 		"outDir": "_build/",
 		"removeComments": false,

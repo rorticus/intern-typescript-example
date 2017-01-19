@@ -1,8 +1,6 @@
-import { createElement } from 'react';
-import { render } from 'react-dom';
-import App from './App';
+import * as angular from 'angular';
+import './App';
 
-render(
-	createElement(App, null),
-	document.getElementById('app')
-);
+angular.element(document).ready(function () {
+	angular.bootstrap(document, [ 'Main' ]);
+});

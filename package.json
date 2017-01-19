@@ -1,5 +1,5 @@
 {
-  "name": "intern-typescript-example",
+  "name": "intern-typescript-angular-example",
   "version": "1.0.0",
   "scripts": {
     "copy": "./node_modules/.bin/copyfiles src/resources/** _build",
@@ -9,7 +9,8 @@
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@types/react": "0.14.34",
+    "@types/angular": "^1.6.2",
+    "@types/angular-mocks": "^1.5.8",
     "copyfiles": "1.0.0",
     "http-server": "0.9.0",
     "intern": "3.3.1",
@@ -18,9 +19,9 @@
     "typescript": "2.0.2"
   },
   "dependencies": {
+    "angular": "^1.6.1",
+    "angular-mocks": "^1.6.1",
     "bootstrap": "3.3.7",
-    "dojo-loader": "2.0.0-beta.7",
-    "react": "15.3.1",
-    "react-dom": "15.3.1"
+    "dojo-loader": "2.0.0-beta.7"
   }
 }

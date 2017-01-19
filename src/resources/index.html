@@ -3,13 +3,20 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>intern-typescript-example</title>
+		<title>intern-typescript-angular-example</title>
 		<link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="app.css" rel="stylesheet">
 	</head>
 	<body>
-		<div id="app"></div>
-		<script src="../../../node_modules/dojo-loader/loader.js"></script>
+		<div ng-controller="MainController">
+			<input ng-model="x" type="number">
+			<input ng-model="y" type="number">
+			<strong>{{z}}</strong>
+			<!-- the value for ngClick maps to the sum function within the controller body -->
+			<input type="button" ng-click="sum()" value="+">
+		</div>
+		<script src="../../../node_modules/angular/angular.js"></script>
+		<script src="../../../node_modules/@dojo/loader/loader.js"></script>
 		<script src="../config.js"></script>
 	</body>
 </html>
