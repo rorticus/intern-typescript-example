@@ -1,6 +1,6 @@
 # intern-typescript-angular-example
 
-This is an example of using angular and angular mock while righting unit tests using Intern.
+This is an example of using angular and angular mock while writing unit tests using Intern.
 
 ## Installation
 
