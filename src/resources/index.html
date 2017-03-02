@@ -5,9 +5,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>intern-typescript-angular-example</title>
 		<link href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link href="app.css" rel="stylesheet">
 	</head>
 	<body>
+		<div test-directive></div>
+
 		<div ng-controller="MainController">
 			<input ng-model="x" type="number">
 			<input ng-model="y" type="number">
@@ -16,7 +17,46 @@
 			<input type="button" ng-click="sum()" value="+">
 		</div>
 		<script src="../../../node_modules/angular/angular.js"></script>
-		<script src="../../../node_modules/@dojo/loader/loader.js"></script>
-		<script src="../config.js"></script>
+		<script src="../../../node_modules/systemjs/dist/system.js"></script>
+		<script>
+      	window.define = System.amdDefine;
+      	window.require = window.requirejs = System.amdRequire;
+  		</script>
+		<script>
+		SystemJS.config({
+			baseURL: '/',
+
+			map: {
+				'tests': '_build/tests',
+				'src': '_build/src',
+				'angular': '/node_modules/angular/angular.js',
+				'angular-mocks': '/node_modules/angular-mocks/angular-mocks.js',
+				text: '/node_modules/systemjs-plugin-text/text.js'
+			},
+
+			packages: {
+				'tests': {
+					'defaultExtension': 'js'
+				},
+				'src': {
+					'defaultExtension': 'js'
+				}
+			},
+
+			meta: {
+				pluginFirst: false,
+				angular: {
+					format: 'global',
+					exports: 'angular'
+				},
+				'*.html': {
+					loader: 'text'
+				}
+			}
+		});
+
+		require(['../index']);
+
+		</script>
 	</body>
 </html>

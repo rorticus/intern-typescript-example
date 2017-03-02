@@ -9,11 +9,16 @@
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "@dojo/interfaces": "^2.0.0-alpha.11",
     "@types/angular": "^1.6.2",
     "@types/angular-mocks": "^1.5.8",
+    "@types/chai": "^3.4.35",
+    "@types/glob": "^5.0.30",
+    "@types/leadfoot": "0.0.0",
     "copyfiles": "1.0.0",
     "http-server": "0.9.0",
     "intern": "^3.4.2",
+    "intern-systemjs-loader": "^0.3.0",
     "remap-istanbul": "0.6.4",
     "tslint": "3.15.0-dev.0",
     "typescript": "2.0.2"
@@ -22,6 +27,6 @@
     "angular": "^1.6.1",
     "angular-mocks": "^1.6.1",
     "bootstrap": "3.3.7",
-    "dojo-loader": "2.0.0-beta.7"
+    "systemjs-plugin-text": "0.0.9"
   }
 }

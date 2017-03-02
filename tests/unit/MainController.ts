@@ -1,9 +1,8 @@
 import * as registerSuite from 'intern!object';
-import * as assert from 'intern/chai!assert';
-import 'intern/order!../../node_modules/angular/angular.js';
-import 'intern/order!../../node_modules/angular-mocks/angular-mocks.js';
+import { assert } from 'intern/chai';
 import * as angular from 'angular';
-import '../../src/App';
+import 'angular-mocks';
+import 'src/App';
 
 let controller: angular.IController = null;
 let scope: any = null;
@@ -15,7 +14,7 @@ interface InjectedFunction {
 function inject(fn: InjectedFunction) {
 	return function () {
 		angular.injector([ 'ng', 'ngMock', 'Main' ]).invoke(fn);
-	}
+	};
 }
 
 registerSuite({
