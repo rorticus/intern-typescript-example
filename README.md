@@ -9,10 +9,6 @@ npm install
 ```
 
 ```bash
-typings install
-```
-
-```bash
 npm run compile && npm run copy
 ```
 
