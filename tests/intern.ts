@@ -1,7 +1,7 @@
-export const proxyPort = 9000;
+export const proxyPort = 9001;
 
 // A fully qualified URL to the Intern proxy
-export const proxyUrl = 'http://localhost:9000/';
+export const proxyUrl = 'http://localhost:9001/';
 
 // Default desired capabilities for all environments. Individual capabilities can be overridden by any of the
 // specified browser environments in the `environments` array below as well. See
