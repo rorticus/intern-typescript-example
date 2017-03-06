@@ -45,4 +45,22 @@ export const loaderOptions = {
 	}
 };
 
+/*
+Fix for an issue with intern-systemjs-loader not working correctly in Windows
+*/
+declare const System: any;
+
+export const setup = function () {
+	const decanonicalize = System.decanonicalize;
+	System.decanonicalize = function (name: string, id: string) {
+		let done = decanonicalize.call(this, name, id);
+
+		if (/^intern\//.test(name)) {
+			done = done.replace(/^\/\w:/, '');
+		}
+
+		return done;
+	};
+};
+
 export const excludeInstrumentation = true;
